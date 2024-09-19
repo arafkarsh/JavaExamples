@@ -34,7 +34,7 @@ import static java.lang.System.out;
  * @version:
  * @date:
  */
-public class PatternMatch {
+public class SwitchExpressionExample {
 
     public static void main (String[] args) {
         out.println("Pattern Matching in Java 17");

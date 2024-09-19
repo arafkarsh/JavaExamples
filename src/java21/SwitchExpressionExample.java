@@ -25,14 +25,12 @@
  * under the terms of the Apache 2 License version 2.0
  * as published by the Apache Software Foundation.
  */
-package java14;
+package java21;
 
-import java05.annotations.SourceCodeAuthorMethod;
-
-import java.sql.SQLOutput;
+import static java.lang.System.out;
 
 /**
- * Java 14 Example
+ * Java 14, 17 and 21 Example
  * Switch Expression Example
  *
  * @author: Araf Karsh Hamid
@@ -43,15 +41,24 @@ public class SwitchExpressionExample {
 
     public static void main (String[] args)  {
         // Java 14
-        System.out.println("JAVA 14 >>>>>--------------------------------------------------------");
-        System.out.println("Simple Switch Expressions - No Fall Through");
-        System.out.println("< Day of the Week Old Model = "+switchOldModel(3));
-        System.out.println("> Day of the Week New Model = "+switchNewModel(3));
-        System.out.println("Complex Switch Expressions - No Fall Through");
-        System.out.println("< Day of the Week Old Model = "+switchOldModel(6));
-        System.out.println("> Day of the Week New Model = "+switchNewModel(6));
-        System.out.println("> Type of the Day. Monday     = "+switchNewModel2("Monday"));
-        System.out.println("> Type of the Day. Sunday      = "+switchNewModel2("Sunday"));
+        out.println("JAVA 14 >>>>>--------------------------------------------------------");
+        out.println("Simple Switch Expressions - No Fall Through");
+        out.println("< Day of the Week Old Model = "+switchOldModel(3));
+        out.println("> Day of the Week New Model = "+switchNewModel(3));
+        out.println("Complex Switch Expressions - No Fall Through");
+        out.println("< Day of the Week Old Model = "+switchOldModel(6));
+        out.println("> Day of the Week New Model = "+switchNewModel(6));
+        out.println("> Type of the Day. Monday     = "+switchNewModel2("Monday"));
+        out.println("> Type of the Day. Sunday      = "+switchNewModel2("Sunday"));
+        // Java 17
+        out.println("JAVA 17 >>>>>--------------------------------------------------------");
+        switchNewModel17(127);
+        switchNewModel17("127");
+        // Java 21
+        out.println("JAVA 21 >>>>>--------------------------------------------------------");
+        out.println("Condition: "+switchNewModel21(127));
+        out.println("Condition: "+switchNewModel21(90));
+        out.println("Condition: "+switchNewModel21("127"));
     }
 
     /**
@@ -105,6 +112,26 @@ public class SwitchExpressionExample {
             case "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY" -> "Weekday";
             case "SATURDAY", "SUNDAY" -> "Weekend";
             default -> throw new IllegalArgumentException("Invalid day: " + day);
+        };
+    }
+
+    // Java 17 Feature
+    public static void switchNewModel17(Object o) {
+        switch (o) {
+            case Integer i -> out.println("Integer: "+ i);
+            case Long l -> out.println("Long: "+ l);
+            default -> out.println("Other: "+ o);
+        }
+    }
+
+    // Java 21 Feature
+    public static String switchNewModel21(Object o) {
+        return switch (o) {
+            case Integer i when i > 100 -> "Large integer";
+            case Integer i -> "Small integer";
+            case String s when s.length() > 5 -> "Long string";
+            case String s -> "Short string";
+            default -> "Unknown type";
         };
     }
 }
