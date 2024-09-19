@@ -19,7 +19,7 @@ Features
 Source: https://openjdk.org/projects/jdk/23/
 
 | Version           | Date        | Features                                                                    |
-+----------------+-----------+---------------------------------------------------------------+
+|-----------------|------------|---------------------------------------------------------------|
 | J2SE 5.0          | Sep 2004  | Enhanced For Loop, Generics, Enums, Autoboxing                      |
 | Java SE 8   LTS | Mar 2014 | Functional Programming, Lambda & Streams, Multiple Inheritance |
 | Java SE 9         | Sep 2017 | Modularization - Java Platform Module System                       |
