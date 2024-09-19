@@ -18,3 +18,21 @@ Features
 
 Source: https://openjdk.org/projects/jdk/23/
 
+| Version           | Date        | Features                                                                    |
++----------------+-----------+---------------------------------------------------------------+
+| J2SE 5.0          | Sep 2004  | Enhanced For Loop, Generics, Enums, Autoboxing                      |
+| Java SE 8   LTS | Mar 2014 | Functional Programming, Lambda & Streams, Multiple Inheritance |
+| Java SE 9         | Sep 2017 | Modularization - Java Platform Module System                       |
+| Java SE 10       | Mar 2018 | Local Variable Type Inference                                           |
+| Java SE 14       | Mar 2020 | Switch Expressions (Preview in 12 and 13)                             |
+| Java SE 15       | Sep 2020 | Text Blocks (Preview in 13)                                               |
+| Java SE 16       | Mar 2021 | Record Classes (Preview in 14, 15)                                      |
+| Java SE 17 LTS | Sep 2021   |                                                                               |
+| Java SE 18       | Mar 2022  |                                                                               |
+| Java SE 19       | Sep 2022  |                                                                               |
+| Java SE 20       | Mar 2023  |                                                                               |
+| Java SE 21 LTS | Sep 2023  |                                                                               |
+| Java SE 22       | Mar 2024  |                                                                               |
+| Java SE 23       | Sep 2024  | Pattern Match (Primitives), Module Import, Simplified Main, Stream Gatherers, Vector API |
+
+|
