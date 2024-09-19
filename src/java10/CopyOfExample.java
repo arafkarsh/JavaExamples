@@ -25,15 +25,15 @@
  * under the terms of the Apache 2 License version 2.0
  * as published by the Apache Software Foundation.
  */
-package Java16;
+package java10;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Java 16 Examples
+ * Java 10 Examples
  * List CopyOf
- * 
+ *
  * @author: Araf Karsh Hamid
  * @version:
  * @date:
