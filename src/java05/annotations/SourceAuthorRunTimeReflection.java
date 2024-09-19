@@ -52,7 +52,7 @@ public class SourceAuthorRunTimeReflection {
 		 
 		System.out.println("Custom Annotations for Class Author and Audit Details...");
 		
-		Class obj = Class.forName("com.fusionfire.examples.commons.utils.SourceAuthorAnnotationExample");
+		Class obj = Class.forName("java05.annotations.SourceAuthorAnnotationExample");
 
 		showAuthorDetails(obj, null);
 		showMethodDetails(obj);
@@ -69,7 +69,7 @@ public class SourceAuthorRunTimeReflection {
 	public static Class showAuthorDetails(Class obj, Class _author1) throws ClassNotFoundException {
 		// Process @CustomClass
 		
-		Class _author = Class.forName("com.fusionfire.examples.commons.utils.SourceCodeAuthorClass");
+		Class _author = Class.forName("java05.annotations.SourceCodeAuthorClass");
 		
 		if (obj.isAnnotationPresent(_author)) {
 	 
@@ -112,7 +112,7 @@ public class SourceAuthorRunTimeReflection {
 		// Process @SourceCodeAuthorMethod
 		for (Method method : obj.getDeclaredMethods()) {
 			
-			Class cm = Class.forName("com.fusionfire.examples.commons.utils.SourceCodeAuthorMethod");
+			Class cm = Class.forName("java05.annotations.SourceCodeAuthorMethod");
 	 
 			// if method is annotated with @@SourceCodeAuthorMethod
 			if (method.isAnnotationPresent(cm)) {

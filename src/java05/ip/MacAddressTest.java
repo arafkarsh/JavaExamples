@@ -44,38 +44,31 @@ import java.net.UnknownHostException;
  */
 public class MacAddressTest {
 
-	  public static void main(String[] args){
-		  
+	  public static void main(String[] args) {
 			InetAddress ip;
 			try {
-		 
 				ip = InetAddress.getLocalHost();
 				System.out.println("Current IP address : " + ip.getHostAddress());
-		 
 				NetworkInterface network = NetworkInterface.getByInetAddress(ip);
-		 
+				System.out.println("Network Interface = "+network+", HW Address = "+network.getHardwareAddress());
 				byte[] mac = network.getHardwareAddress();
-				
-				System.out.println("Byte Array Size = "+mac.length);
-		 
-				System.out.print("Current MAC address : ");
-		 
-				StringBuilder sb = new StringBuilder();
-				for (int i = 0; i < mac.length; i++) {
-					System.out.print(new Integer(mac[i])+"|");
-					sb.append(String.format("%02X%s", mac[i], (i < mac.length - 1) ? "-" : ""));		
-				}
-				System.out.println("\n"+sb.toString());
+				if(mac != null) {
+					System.out.println("Byte Array Size = " + mac.length);
+					System.out.print("Current MAC address : ");
 
+					StringBuilder sb = new StringBuilder();
+					for (int i = 0; i < mac.length; i++) {
+						System.out.print(Integer.valueOf(mac[i]) + "|");
+						sb.append(String.format("%02X%s", mac[i], (i < mac.length - 1) ? "-" : ""));
+					}
+					System.out.println("\n" + sb.toString());
+				} else {
+					System.out.println("Mac Address is NULL from Network Interface");
+				}
 			} catch (UnknownHostException e) {
-		 
 				e.printStackTrace();
-		 
 			} catch (SocketException e){
-		 
 				e.printStackTrace();
-		 
 			}
-		 
-		   }
+	  }
 }
