@@ -25,48 +25,19 @@
  * under the terms of the Apache 2 License version 2.0
  * as published by the Apache Software Foundation.
  */
-package java10;
-
-import java.util.ArrayList;
-import java.util.List;
+package java11;
 
 /**
- * Java 10 Examples
- * List CopyOf - Returns Immutable Collection
+ * Java 11 Example
+ * File Read Write
  *
  * @author: Araf Karsh Hamid
  * @version:
  * @date:
  */
-public class CopyOfExample {
+public class FileReadWriteExample {
 
     public static void main (String[] args) {
-        List<String> cities = buildCities();
-        addNewCity(cities, "Mumbai");
-        // List CopyOf - Returns Immutable Collection
-        // Constraints - Collection Must not have Nullable Value
-        List<String> immutableCities = List.copyOf(cities);
-        addNewCity(immutableCities, "Lucknow");
-    }
-
-    public static void addNewCity(List<String> cities, String city) {
-        try {
-            cities.add(city);
-            System.out.println("City Added = " + city);
-        } catch (Exception e) {
-            System.out.println("Unable to add "+city+"! Error = "+e);
-        }
-        System.out.println("Cites = " + cities);
-    }
-
-    public static  List<String> buildCities() {
-        List<String> cities = new ArrayList<String>();
-        cities.add("New York");
-        cities.add("Kochi");
-        cities.add("London");
-        cities.add("Tokyo");
-        cities.add("Sydney");
-        System.out.println("Cites = "+cities);
-        return cities;
+        
     }
 }

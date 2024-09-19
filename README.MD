@@ -10,7 +10,7 @@
 | Java SE 7   | Jul 2011 | Project Coin (Diamond Operator, Strings in Switch), NIO.2                                       |
 | Java SE 8   LTS | Mar 2014 | Functional Programming, Lambda & Streams, Multiple Inheritance                                  |
 | Java SE 9   | Sep 2017 | Modularization - Java Platform Module System                                                    |
-| Java SE 10  | Mar 2018 | Local Variable Type Inference                                                                   |
+| Java SE 10  | Mar 2018 | Local Variable Type Inference, List / Set / Map - CopyOf                                        |
 | Java SE 11 LTS | Sep 2018 | New HTTP Client API, Nest-based access control, Remove JavaFX                                   |
  | Java SE 12  | Mar 2019 | Switch Expressions (Preview)                                                                    | 
 | Java SE 13  | Sep 2019 | Text Blocks (Preview)                                                                           |
