@@ -42,3 +42,6 @@ Features
 - 482:	[Flexible Constructor Bodies (Second Preview)](https://openjdk.org/jeps/482)
 
 Source: https://openjdk.org/projects/jdk/23/
+
+This project is currently a work in progress. All key examples from Java versions 5 through 23 are 
+expected to be completed by the first week of October 2024.
