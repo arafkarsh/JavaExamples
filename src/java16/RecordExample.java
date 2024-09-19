@@ -46,14 +46,53 @@ package java16;
  */
 public class RecordExample {
 
+    // Record with Attributes Definition ONLY
     record User(String firstName, String lastName, String email, String phone, String dept) {}
+
+    // Record with Custom Constructor for Field Validations
+    record User2(String firstName, String lastName, String email, String phone, String dept) {
+        User2(String firstName, String lastName, String email, String phone, String dept) {
+            if(firstName == null || lastName == null) {
+                throw new IllegalArgumentException("Name should not be NULL! First Name = "+firstName+" Last Name = "+lastName);
+            }
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.email = email;
+            this.phone = phone;
+            this.dept = dept;
+        }
+    }
+
+    // Record with Compact Constructor - ONLY Validations are written
+    record User3(String firstName, String lastName, String email, String phone, String dept) {
+        User3 {
+            if(firstName == null || lastName == null) {
+                throw new IllegalArgumentException("Name should not be NULL! First Name = "+firstName+" Last Name = "+lastName);
+            }
+        }
+    }
 
     public static void main (String[] args) {
         // Java 16
         System.out.println("JAVA 16 >>>>>--------------------------------------------------------");
-        System.out.println("Record Example. ");
+        System.out.println("Record Example. Test 1: ");
         User adminUser = new User("Jane", "Doe", "jane.doe@g.com", "111-222-3456", "Engineering");
         System.out.println("Admin User =  "+adminUser.firstName() + " " + adminUser.lastName());
         System.out.println("Admin User =  "+adminUser);
+
+        System.out.println("Record Example. Test 2: With Custom Constructor");
+        User2 adminUser2 = new User2("Susan", "Doe", "susan.doe@g.com", "111-222-3457", "Engineering");
+        System.out.println("Admin User =  "+adminUser2.firstName() + " " + adminUser2.lastName());
+        System.out.println("Admin User =  "+adminUser2);
+
+        System.out.println("Record Example. Test 3: With Compact Constructor");
+        User3 adminUser3 = new User3("Annie", "Doe", "annie.doe@g.com", "111-222-3458", "Engineering");
+        System.out.println("Admin User =  "+adminUser3.firstName() + " " + adminUser3.lastName());
+        System.out.println("Admin User =  "+adminUser3);
+
+        System.out.println("Record Example. Test 4: With Compact Constructor & Testing Field Validations");
+        User3 adminUser4 = new User3("Annie", null, "annie.doe@g.com", "111-222-3458", "Engineering");
+        System.out.println("Admin User =  "+adminUser4.firstName() + " " + adminUser4.lastName());
+        System.out.println("Admin User =  "+adminUser4);
     }
 }
