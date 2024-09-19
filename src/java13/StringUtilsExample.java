@@ -25,10 +25,10 @@
  * under the terms of the Apache 2 License version 2.0
  * as published by the Apache Software Foundation.
  */
-package java12;
+package java13;
 
 /**
- * Java 11,12 Example
+ * Java 11,12,13 Example
  * String Utils Example
  *
  * @author: Araf Karsh Hamid
@@ -60,5 +60,13 @@ public class StringUtilsExample {
         String word = "Sword";
         System.out.println("String var word=[" + word + "] After Transform=["
                 + word.transform(s -> s.substring(1, 2).toUpperCase() + s.substring(2, 5)) + "]");
+
+        // Java 13
+        System.out.println("JAVA 13 >>>>>--------------------------------------------------------");
+        System.out.println(">> String Utils Formatted String");
+        String data = "My Name is %s. I am the youngest doctor (age %d) at %s Hospital.".formatted("Jane Doe", 23, "John Hopkins");
+        System.out.println(data);
+
+
     }
 }
