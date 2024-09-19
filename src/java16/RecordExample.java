@@ -25,7 +25,7 @@
  * under the terms of the Apache 2 License version 2.0
  * as published by the Apache Software Foundation.
  */
-package Java16;
+package java16;
 
 /**
  * Java 16 Examples
