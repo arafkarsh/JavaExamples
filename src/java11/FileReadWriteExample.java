@@ -27,9 +27,14 @@
  */
 package java11;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
 /**
  * Java 11 Example
- * File Read Write
+ * Files ReadString WriteString
  *
  * @author: Araf Karsh Hamid
  * @version:
@@ -37,7 +42,18 @@ package java11;
  */
 public class FileReadWriteExample {
 
-    public static void main (String[] args) {
-        
+    public static void main (String[] args) throws IOException {
+        // Set Path
+        Path path = Paths.get("./resources/akiera-kiera_biography.txt");
+        // Read File
+        String fileData = Files.readString(path);
+        System.out.println("File Size = "+fileData.length());
+
+        // Write File
+        Path path2 = Paths.get("./resources/akiera.txt");
+        Files.writeString(path2, fileData);
+        if(path2.toFile().canRead()) {
+          System.out.println("New File is readable! "+path2.toString());
+        }
     }
 }
