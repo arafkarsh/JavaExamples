@@ -29,7 +29,16 @@ package java16;
 
 /**
  * Java 16 Examples
- * Record Example
+ * Record Example - To Eliminate the verbosity in Creating Java Beans
+ * - Public Accessor Methods
+ * - Constructor
+ * - Equals
+ * - Hashcode
+ * - toString
+ * are automatically created
+ * You can have custom implementations of the above methods..
+ * Compact Constructors are allowed only in Records.
+ * You cant add Instance Variables or Instance Initializers
  *
  * @author: Araf Karsh Hamid
  * @version:
@@ -37,7 +46,14 @@ package java16;
  */
 public class RecordExample {
 
+    record User(String firstName, String lastName, String email, String phone, String dept) {}
+
     public static void main (String[] args) {
-        // WIP
+        // Java 16
+        System.out.println("JAVA 16 >>>>>--------------------------------------------------------");
+        System.out.println("Record Example. ");
+        User adminUser = new User("Jane", "Doe", "jane.doe@g.com", "111-222-3456", "Engineering");
+        System.out.println("Admin User =  "+adminUser.firstName() + " " + adminUser.lastName());
+        System.out.println("Admin User =  "+adminUser);
     }
 }
