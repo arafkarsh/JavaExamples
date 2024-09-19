@@ -36,17 +36,17 @@ import module java.base;
  * @version:
  * @date:
  */
-public class _3_ModuleImport {
+public class _3_ModuleImportExample {
 
     public static void main (String[] args) throws Exception{
         // Multiple API's are called with a single import.  JEP 476
         // import module java.base
-        out.println("java --enable-preview _3_ModuleImport.java");
+        out.println("java --enable-preview _3_ModuleImportExample.java");
         out.println("Array of Values  = "+List.of("Hello ", "Module Import ", "World!"));
         File file = new File("README.MD");
         out.println("File README.MD = "+file.canRead());
         out.println("Reading the file....");
-        try (BufferedReader br = new BufferedReader(new FileReader(file))) {
+        try (var br = new BufferedReader(new FileReader(file))) {
             while(br.ready()) {
                 out.println(br.readLine());
             }

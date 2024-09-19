@@ -39,7 +39,7 @@ void main(String[] args) {
 }
 
 void newModel() {
-    out.println("Pattern Matching New Model.... Primitive Supported");
+    out.println("Switch Expression Pattern Matching New Model.... Primitive Supported");
     Object o = 127;
     switch (o) {
         case int i -> out.println("Integer: "+ i);
@@ -49,7 +49,7 @@ void newModel() {
 }
 
 void oldModel() {
-    out.println("Pattern Matching Old Model....");
+    out.println("Switch Expression Pattern Matching Old Model....");
     Object o = 127;
     switch (o) {
         case Integer i -> out.println("Integer: "+ i);
