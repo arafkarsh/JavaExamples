@@ -25,7 +25,7 @@
  * under the terms of the Apache 2 License version 2.0
  * as published by the Apache Software Foundation.
  */
-package java05.crypto;
+package java01.crypto;
 
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
