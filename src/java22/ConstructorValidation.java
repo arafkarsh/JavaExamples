@@ -33,7 +33,7 @@ import static java.lang.System.out;
 
 /**
  * Java 22 Example
- * Constructor Validation
+ * Constructor Validation before the super() method call.
  *
  * @author: Araf Karsh Hamid
  * @version:
@@ -45,11 +45,11 @@ public class ConstructorValidation {
         // Java 22
         out.println("JAVA 22 >>>>>--------------------------------------------------------");
         out.println("Constructor Validation - Old Way with Static Code");
-        testConstructorOld(100);
-        testConstructorOld(-20);
+        testConstructorOld(127);
+        testConstructorOld(-23);
         out.println("Constructor Validation - New Way: Validations before super() call");
-        testConstructorNew(100);
-        testConstructorNew(-20);
+        testConstructorNew(127);
+        testConstructorNew(-23);
     }
 
     public static void testConstructorOld(long value) {
@@ -74,7 +74,7 @@ public class ConstructorValidation {
 }
 
 /**
- * Old of Constructor Validation
+ * Old of Constructor Validation using a static method call.
  */
 class PositiveIntegerOld extends BigInteger {
 
@@ -82,6 +82,11 @@ class PositiveIntegerOld extends BigInteger {
         super(String.valueOf(validateInput(value)));
     }
 
+    /**
+     * validation static method call
+     * @param value
+     * @return
+     */
     private static long validateInput(long value) {
         if(value < 0) {
             throw new IllegalArgumentException("Input Must be a Positive Number! Input="+value);
@@ -90,6 +95,9 @@ class PositiveIntegerOld extends BigInteger {
     }
 }
 
+/**
+ * Constructor Validation before the super() method call
+ */
 class PositiveIntegerNew extends BigInteger {
 
     public PositiveIntegerNew(long value) {
