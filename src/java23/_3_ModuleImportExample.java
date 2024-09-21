@@ -38,7 +38,9 @@ import module java.base;
  */
 public class _3_ModuleImportExample {
 
-    public static void main (String[] args) throws Exception{
+    public static void main (String[] args) throws Exception {
+        // Java 23
+        out.println("JAVA 23 >>>>>--------------------------------------------------------");
         // Multiple API's are called with a single import.  JEP 476
         // import module java.base
         out.println("java --enable-preview _3_ModuleImportExample.java");

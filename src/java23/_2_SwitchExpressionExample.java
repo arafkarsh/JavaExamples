@@ -33,6 +33,8 @@ import static java.lang.System.out;
  * @date:
  */
 void main(String[] args) {
+    // Java 23
+    out.println("JAVA 23 >>>>>--------------------------------------------------------");
     // Primitive Pattern Matching: JEP 455
     oldModel();
     newModel();
