@@ -33,9 +33,11 @@ import java.util.Date;
 import static java.lang.System.out;
 
 /**
- * Virtual Threads
+ * Virtual Threads - JEP 436
  * Virtual threads are lightweight threads that dramatically reduce the effort of writing,
  * maintaining, and observing high-throughput concurrent applications.
+ *
+ * Source: https://openjdk.org/jeps/436
  *
  * @author: Araf Karsh Hamid
  * @version:
@@ -54,7 +56,7 @@ public class VirtualThreadsExample {
      * @throws InterruptedException
      */
     private static void virtualThreadsExample1() throws InterruptedException {
-        out.println(new Date()+"| Virtual Threads Example 1");
+        out.println(new Date()+"| Virtual Threads Example 1: JEP 436");
         var virtualThread = Thread.ofVirtual().start(() -> {
             System.out.println(new Date()+"| Running in a virtual thread");
             try { Thread.sleep(Duration.ofSeconds(3)); }
