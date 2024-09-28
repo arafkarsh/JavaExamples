@@ -50,6 +50,7 @@ introducing abstraction layers, such as interfaces or abstract classes, that bot
 Together, these principles encourage better software design by promoting loose coupling, high cohesion, 
 and code reusability.
 
-Check out the [article](https://arafkarsh.medium.com/java-solid-patterns-refactoring-cfc826c275b5) () on medium.com for an in-depth exploration of SOLID Design Principles and 
-practical guidance on refactoring legacy application code.
+Check out the [article](https://arafkarsh.medium.com/java-solid-patterns-refactoring-cfc826c275b5) 
+on medium.com for an in-depth exploration of SOLID Design Principles and practical guidance on 
+refactoring legacy application code.
 
