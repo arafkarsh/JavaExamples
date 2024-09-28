@@ -10,7 +10,7 @@ developers write more maintainable, flexible, and scalable code. These principle
 by Robert Cecil Martin (Uncle Bob, born December 5, 1952) and aimed to improve software 
 design and architecture.
 
-![SOLID](https://raw.githubusercontent.com/arafkarsh/JavaExamples/main/images/Java-SOLIDjpg)
+![SOLID](https://raw.githubusercontent.com/arafkarsh/JavaExamples/main/images/Java-SOLID.jpg)
 
 ## 1. S - Single Responsibility Principle (SRP)
 - Definition: A class should have only one reason to change, meaning it should have only one 
