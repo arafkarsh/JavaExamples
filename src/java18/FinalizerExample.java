@@ -48,12 +48,12 @@ public class FinalizerExample {
     public static void main(String[] args) throws Exception {
         // Java 18
         out.println("JAVA 18 >>>>>--------------------------------------------------------");
-        OldFinalizerExample ofe = new OldFinalizerExample();
+        var ofe = new OldFinalizerExample();
         ofe.printResource();
         ofe = null;
         // Finalizer may or may not be called in a timely manner
         System.gc();
-        try (NewFinalizerExample nfe = new NewFinalizerExample()) {
+        try (var nfe = new NewFinalizerExample()) {
             // Example usage of the resource
             nfe.printResource();
         }
