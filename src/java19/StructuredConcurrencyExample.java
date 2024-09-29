@@ -38,7 +38,7 @@ import static java.lang.Thread.*;
  *
  * Structured concurrency allows tasks to be managed collectively, simplifying error handling
  * and cancellation.
- * 
+ *
  * @author: Araf Karsh Hamid
  * @version:
  * @date:
