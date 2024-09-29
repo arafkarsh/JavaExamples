@@ -19,7 +19,7 @@ package designPatterns.solid.d;
 // import org.springframework.context.annotation.Bean;
 // import org.springframework.context.annotation.Configuration;
 
-import designPatterns.core.BankNotificationInterface;
+import designPatterns.solid.core.BankNotificationInterface;
 
 /**
  * Only One Implementation is loaded based on the following conditional configuration

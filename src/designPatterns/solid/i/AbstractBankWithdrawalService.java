@@ -15,8 +15,8 @@
  */
 package designPatterns.solid.i;
 
-import designPatterns.core.BankAccountRepositoryService;
-import designPatterns.core.BankNotificationService;
+import designPatterns.solid.core.BankAccountRepositoryService;
+import designPatterns.solid.core.BankNotificationService;
 import designPatterns.solid.l.BankWithdrawalInterface;
 
 /**

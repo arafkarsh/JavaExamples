@@ -15,7 +15,7 @@
  */
 package designPatterns.solid.d;
 
-import designPatterns.core.BankNotificationInterface;
+import designPatterns.solid.core.BankNotificationInterface;
 
 /**
  * SOLID Examples

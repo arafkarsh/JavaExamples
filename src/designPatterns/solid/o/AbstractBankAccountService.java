@@ -15,8 +15,8 @@
  */
 package designPatterns.solid.o;
 
-import designPatterns.core.BankAccountRepositoryInterface;
-import designPatterns.core.BankNotificationInterface;
+import designPatterns.solid.core.BankAccountRepositoryInterface;
+import designPatterns.solid.core.BankNotificationInterface;
 
 /**
  * SOLID Examples
