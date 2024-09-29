@@ -37,6 +37,8 @@ import static java.lang.System.out;
 public class SwitchExpressionExample {
 
     public static void main (String[] args) {
+        // Java 17
+        out.println("JAVA 17 >>>>>--------------------------------------------------------");
         out.println("Pattern Matching in Java 17");
         Object o = 127;
         switch (o) {
