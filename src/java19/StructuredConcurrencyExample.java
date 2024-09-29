@@ -28,13 +28,17 @@
 package java19;
 
 import java.util.concurrent.ExecutionException;
-import java.util.concurrent.Future;
 import java.util.concurrent.StructuredTaskScope;
 
 import static java.lang.System.out;
 import static java.lang.Thread.*;
 
 /**
+ * JEP 428: Structured Concurrency (Incubator)
+ *
+ * Structured concurrency allows tasks to be managed collectively, simplifying error handling
+ * and cancellation.
+ * 
  * @author: Araf Karsh Hamid
  * @version:
  * @date:
