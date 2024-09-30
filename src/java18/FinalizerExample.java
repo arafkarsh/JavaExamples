@@ -39,6 +39,17 @@ import static java.lang.System.out;
  * Java 18 deprecates the finalization mechanism for removal, which encourages developers to use
  * alternative methods like AutoCloseable.
  *
+ * Old Way: Using finalize()
+ *
+ * In the older Java versions, developers often used the finalize() method to release resources,
+ * such as closing a file or releasing memory. However, this approach has significant downsides,
+ * such as unpredictable timing of finalization and high overhead for garbage collection.
+ *
+ * New Way: Using AutoCloseable and try-with-resources
+ *
+ * Java 18 encourages developers to use AutoCloseable with try-with-resources to release
+ * resources deterministically and effectively, addressing the issues found with finalize().
+ *
  * @author: Araf Karsh Hamid
  * @version: 0.1
  * @date: 2024-09-29T21:52
@@ -77,6 +88,15 @@ class OldFinalizerExample {
         out.println(new Date()+" | Resource = "+resource);
     }
 
+    /**
+     * finalize()
+     * 	•	finalize() is invoked by the garbage collector just before an object is destroyed.
+     * 	•	This method can be used to release resources, but it has major drawbacks:
+     * 	•	Unpredictable timing: There’s no guarantee on when finalize() will be called.
+     * 	•	Performance: The use of finalizers adds an overhead to garbage collection and can cause delays.
+     * 	•	Memory Leaks: Objects with a finalize() method often take longer to be collected.
+     * @throws Throwable
+     */
     @Override
     protected void finalize() throws Throwable {
         try {
@@ -103,6 +123,15 @@ class NewFinalizerExample implements AutoCloseable {
         out.println(new Date()+" | Resource = "+resource);
     }
 
+    /**
+     * 	- AutoCloseable Interface: Implementing AutoCloseable allows the object to be used in
+     * 	  a try-with-resources block, where close() is called automatically at the end of the block.
+     * 	- try-with-resources: This construct ensures that the resource is closed automatically,
+     * 	  which is deterministic and occurs immediately after the block is exited.
+     * 	- Clearer Lifecycle Management: Resources are properly closed as soon as they’re no
+     * 	  longer needed, without relying on the unpredictable garbage collector behavior.
+     * @throws Exception
+     */
     @Override
     public void close() throws Exception {
         out.println(new Date()+" | Releasing resource in finalize: " + resource);
